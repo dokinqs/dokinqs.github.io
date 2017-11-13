@@ -1,0 +1,41 @@
+body {
+  background: url(flowerbkds.png);
+  background-size: 100%;
+}
+div {
+width: 100%;
+height: 100%;
+min-width: 200px;
+min-height: 400px;
+padding-bottom: 10px;
+}
+/**-made by Karen
+dokinqs**/
+h1 {
+  color: rgba(255, 255, 255, 0.95);
+  font-family: 'Megrim',sans-serif;
+  font-size: 500%;
+  text-align: center;
+  padding: 15% 0 5% 0;
+}
+p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size:150%;
+  font-family: 'Megrim',sans-serif;
+  text-align: center;
+  padding-bottom: 5%;
+}
+/**-made by Karen
+dokinqs**/
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 45%;
+}
+a:hover {
+  color: white;
+}
+footer {
+  font-family: 'Megrim', sans-serif;
+  color: rgba(255, 255, 255, 0.85);
+}
