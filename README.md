@@ -1,2 +1,2 @@
-# Single but Not Ready to Mingle
-<a href="https://dokinqs.github.io/">personal site</a>
+# single and not ready to mingle
+<a href="https://dokinqs.github.io/">Me</a>
