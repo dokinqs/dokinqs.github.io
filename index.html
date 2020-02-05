@@ -4,8 +4,7 @@
   <meta charset="utf-8">
   <meta name="author" content="Karen Zhao">
   <title>dokinqs</title>
-  <link rel="stylesheet" type="text/css" href="main.css"/>
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Great+Vibes"/>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Great+Vibes:400"/>
   <!-- <link rel="shortcut icon" type="image/png" href="https://66.media.tumblr.com/2af06ec2d6d542b9378ab539d1fec41a/tumblr_p6e81uoCjl1tgcve3o1_75sq.png"/> -->
 
   <style>
@@ -13,13 +12,16 @@
     margin: 0;
     }
     html, body {
-    background: #eee;
+    background: rgb(255, 255, 255);
     overflow: hidden;
+    font-family: 'Great Vibes', sans-serif;
+    font-weight: 400;
+    font-style: normal;
     }
     .landscape {
     position: relative;
     height: 100vh;
-    background: #234;
+    background: rgb(24, 38, 53);
     overflow: hidden;
     }
     canvas {
@@ -38,14 +40,13 @@
     bottom: 0;
     left: 0;
     font-family: 'Great Vibes', sans-serif;
+    font-weight: 400;
     text-align: center;
     z-index: 99;
     }
     .headingname {
-    font-weight: 400;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 10vw;
-    text-align: center;
     }
     p {
     margin-top: 20px;
@@ -61,20 +62,19 @@
     }
     a {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 32px;
     font-weight: 400;
     }
     a:hover {
     color: rgb(186, 186, 186);
     }
-</style>
+  </style>
 </head>
 
 <body>
     <div class='landscape'></div>
     <canvas id='snow'></canvas>
-
     <div class="textbody">
         <a class="headingname" href="https://www.karenmzhao.tech">Karen Zhao</a>
         <p><span>front-end developer</span>
@@ -82,9 +82,8 @@
             <a href="https://www.github.com/dokinqs">dokinqs</a>
         </p>
     </div>
-
 </body>
-  
+
 <script>
     let w = window.innerWidth,
         h = window.innerHeight,
@@ -99,33 +98,32 @@
         lights = new Array,
         colors = ['#eee'];
 
-    canvas.setAttribute('width',w);
-    canvas.setAttribute('height',h);
+    canvas.setAttribute('width', w);
+    canvas.setAttribute('height', h);
 
     function init() {
         time = 0;
         count = 0;
         for (let i = 0; i < arc; i++) {
             lights[i] = {
-            x: Math.ceil(Math.random() * w),
-            y: Math.ceil(Math.random() * h),
-            toX: Math.random() * 3 + 1,
-            toY: Math.random() * 7 + 1,
-            c: colors[ Math.floor(Math.random() * colors.length) ],
-            size: Math.random() * size
+                x: Math.ceil(Math.random() * w),
+                y: Math.ceil(Math.random() * h),
+                toX: Math.random() * 3 + 1,
+                toY: Math.random() * 7 + 1,
+                c: colors[ Math.floor(Math.random() * colors.length) ],
+                size: Math.random() * size
             }
         }
     }
 
-
     function bubble() {
-        ctx.clearRect(0,0,w,h);
+        ctx.clearRect(0, 0, w, h);
 
         for (let i = 0; i < arc; i++) {
             let li = lights[i];
 
             ctx.beginPath();
-            ctx.arc(li.x, li.y, li.size, 0, Math.PI*2, false);
+            ctx.arc(li.x, li.y, li.size, 0, Math.PI * 2, false);
             ctx.fillStyle = li.c;
             ctx.fill();
 
